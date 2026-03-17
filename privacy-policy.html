@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — EverTurn Games</title>
+  <meta name="description" content="Privacy Policy for EverTurn Games and its mobile applications.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Policy Hero ── */
+    .policy-hero {
+      min-height: 38vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 120px 24px 60px;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 80%, rgba(59, 204, 255, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 20%, rgba(232, 75, 255, 0.05) 0%, transparent 50%),
+        var(--bg-deep);
+    }
+
+    .policy-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--bg-deep));
+    }
+
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      animation: fadeUp 0.9s ease-out both;
+    }
+
+    .policy-hero h1 .accent { color: var(--neon-blue); }
+
+    .policy-hero .last-updated {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      animation: fadeUp 0.9s 0.15s ease-out both;
+    }
+
+    /* ── Policy Layout ── */
+    .policy-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    /* ── Typography ── */
+    .policy-wrap p {
+      color: var(--text-secondary);
+      font-size: 17px;
+      margin-bottom: 1rem;
+    }
+
+    .policy-wrap p:first-of-type {
+      color: var(--text-primary);
+      font-size: 18px;
+    }
+
+    .policy-wrap h2 {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin: 3rem 0 1rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(59, 204, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .policy-wrap h2 .section-num {
+      font-size: 11px;
+      color: var(--neon-blue);
+      opacity: 0.8;
+      min-width: 20px;
+    }
+
+    .policy-wrap h2 .accent { color: var(--neon-blue); }
+
+    /* ── Lists ── */
+    .policy-wrap ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .policy-wrap ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 17px;
+    }
+
+    .policy-wrap ul li::before {
+      content: '\25B8';
+      position: absolute;
+      left: 0;
+      color: var(--neon-blue);
+      font-size: 0.75rem;
+      top: 4px;
+      opacity: 0.7;
+    }
+
+    .policy-wrap ul li strong {
+      color: var(--text-primary);
+    }
+
+    /* ── Links ── */
+    .policy-wrap a {
+      color: var(--neon-blue);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(59, 204, 255, 0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .policy-wrap a:hover {
+      color: #fff;
+      border-color: var(--neon-blue);
+    }
+
+    /* ── Info Cards ── */
+    .policy-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(59, 204, 255, 0.06);
+      border-radius: var(--radius);
+      padding: 22px 28px;
+      margin-bottom: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .policy-card:hover {
+      border-color: rgba(59, 204, 255, 0.15);
+    }
+
+    .policy-card p { margin: 0; font-size: 16px; }
+
+    /* ── Contact box ── */
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(59, 204, 255, 0.08);
+      border-left: 3px solid var(--neon-blue);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-top: 1.5rem;
+    }
+
+    .contact-card p { margin: 0; font-size: 16px; color: var(--text-secondary); }
+    .contact-card p + p { margin-top: 6px; }
+
+    /* ── Provider rows ── */
+    .provider-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .provider-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid rgba(59, 204, 255, 0.05);
+      border-radius: var(--radius-sm);
+      padding: 14px 20px;
+      transition: border-color 0.3s;
+    }
+
+    .provider-row:hover { border-color: rgba(59, 204, 255, 0.14); }
+
+    .provider-name {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--neon-orange);
+    }
+
+    .provider-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    /* ── Scroll reveal ── */
+    .policy-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+    }
+    .policy-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Footer link override ── */
+    .site-footer a {
+      color: inherit;
+      opacity: 0.6;
+      border-bottom: none;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .site-footer a:hover { opacity: 1; color: inherit; }
+
+    @media (max-width: 540px) {
+      .provider-row { grid-template-columns: 1fr; gap: 4px; }
+      .policy-wrap { padding: 40px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="site-nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="EverTurn Games" height="40">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#games">Games</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <div class="policy-hero">
+    <h1><span class="accent">Privacy</span> Policy</h1>
+    <p class="last-updated">Last updated: June 2025</p>
+  </div>
+
+  <!-- ═══════════════ CONTENT ═══════════════ -->
+  <main class="policy-wrap">
+
+    <div class="policy-section">
+      <p>
+        EverTurn Games LLC ("EverTurn Games," "we," "us," or "our") operates the website
+        <a href="https://everturngames.com">everturngames.com</a> and publishes mobile
+        applications on the App Store and Google Play (collectively, the "Services").
+        This Privacy Policy explains what information we collect, how we use it, and
+        your rights regarding that information.
+      </p>
+      <p>By using our Services you agree to the collection and use of information as described in this policy.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="policy-section">
+      <h2><span class="section-num">01</span> Information We <span class="accent">Collect</span></h2>
+      <p><strong style="color:var(--text-primary)">Information you provide directly:</strong></p>
+      <ul>
+        <li>Name and email address submitted through our contact form.</li>
+        <li>Any message content or other information you voluntarily send us.</li>
+      </ul>
+      <p><strong style="color:var(--text-primary)">Information collected automatically:</strong></p>
+      <ul>
+        <li>
+          <strong>Website analytics</strong> — We use Google Analytics to collect anonymous
+          usage data such as pages visited, time on site, browser type, and approximate
+          geographic region. This data does not identify you personally.
+        </li>
+        <li>
+          <strong>Mobile app advertising</strong> — Our mobile games use Google AdMob
+          to display advertisements. AdMob may collect device identifiers, IP address,
+          and usage data to serve and measure ads. See
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+          for full details.
+        </li>
+        <li>
+          <strong>Cookies &amp; similar technologies</strong> — Our website uses cookies
+          for analytics purposes. You can instruct your browser to refuse cookies; some
+          site features may not function correctly if you do so.
+        </li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="policy-section">
+      <h2><span class="section-num">02</span> How We <span class="accent">Use</span> Your Information</h2>
+      <ul>
+        <li>To respond to inquiries submitted through our contact form.</li>
+        <li>To understand how visitors use our website and improve our content.</li>
+        <li>To serve and measure advertising within our mobile applications.</li>
+        <li>To comply with applicable legal obligations.</li>
+      </ul>
+      <div class="policy-card">
+        <p>We do <strong style="color:var(--text-primary)">not</strong> sell your personal information to third parties, ever.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="policy-section">
+      <h2><span class="section-num">03</span> Third-Party <span class="accent">Services</span></h2>
+      <p>Our Services integrate with the following providers, each governed by their own privacy policies:</p>
+      <div class="provider-list">
+        <div class="provider-row">
+          <span class="provider-name">Google Analytics</span>
+          <span class="provider-desc">
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+          </span>
+        </div>
+        <div class="provider-row">
+          <span class="provider-name">Google AdMob</span>
+          <span class="provider-desc">
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+          </span>
+        </div>
+        <div class="provider-row">
+          <span class="provider-name">Formspree</span>
+          <span class="provider-desc">
+            Contact form processing —
+            <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a>
+          </span>
+        </div>
+        <div class="provider-row">
+          <span class="provider-name">GitHub Pages</span>
+          <span class="provider-desc">
+            Website hosting —
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="policy-section">
+      <h2><span class="section-num">04</span> Data <span class="accent">Retention</span></h2>
+      <p>
+        Contact form submissions are retained only as long as needed to respond to your inquiry.
+        Analytics and advertising data is retained per the default settings of the respective
+        service providers listed above.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="policy-section">
+      <h2><span class="section-num">05</span> Children's <span class="accent">Privacy</span></h2>
+      <p>
+        Our Services are not directed to children under the age of 13. We do not knowingly collect
+        personal information from children under 13. If you believe a child has provided us with
+        personal information, please contact us and we will promptly delete it.
+      </p>
+    </div>
+
+    <!-- 6 -->
+    <div class="policy-section">
+      <h2><span class="section-num">06</span> Your <span class="accent">Rights</span></h2>
+      <p>
+        Depending on your location, you may have rights to access, correct, or request deletion
+        of personal information we hold about you. California residents may also have additional
+        rights under the CCPA. To exercise any of these rights, contact us using the information below.
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="policy-section">
+      <h2><span class="section-num">07</span> Security</h2>
+      <p>
+        We implement reasonable technical measures to protect information submitted to us.
+        However, no method of transmission over the internet is 100% secure and we cannot
+        guarantee absolute security.
+      </p>
+    </div>
+
+    <!-- 8 -->
+    <div class="policy-section">
+      <h2><span class="section-num">08</span> Changes to This <span class="accent">Policy</span></h2>
+      <p>
+        We may update this Privacy Policy from time to time. Changes will be posted on this page
+        with an updated "Last updated" date at the top. Continued use of our Services after any
+        changes constitutes acceptance of the revised policy.
+      </p>
+    </div>
+
+    <!-- 9 -->
+    <div class="policy-section">
+      <h2><span class="section-num">09</span> <span class="accent">Contact</span> Us</h2>
+      <p>If you have any questions about this Privacy Policy, reach out:</p>
+      <div class="contact-card">
+        <p><strong style="color:var(--text-primary); font-family:var(--font-display); font-size:12px; letter-spacing:0.08em;">EVERTURN GAMES LLC</strong></p>
+        <p>Email: <a href="mailto:contact@everturngames.com">contact@everturngames.com</a></p>
+        <p>Website: <a href="https://everturngames.com">everturngames.com</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <img src="images/logo.png" alt="EverTurn Games" class="footer-logo">
+      <p class="footer-text">
+        &copy; 2025 EverTurn Games. All rights reserved.
+        &nbsp;|&nbsp;
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Scroll reveal for policy sections
+    const policySections = document.querySelectorAll('.policy-section');
+    const policyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = (i * 0.05) + 's';
+          entry.target.classList.add('visible');
+          policyObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    policySections.forEach(el => policyObserver.observe(el));
+  </script>
+</body>
+</html>
