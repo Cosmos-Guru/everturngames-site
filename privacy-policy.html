@@ -98,6 +98,17 @@
 
     .policy-wrap h2 .accent { color: var(--neon-blue); }
 
+    /* ── Subheadings inside sections ── */
+    .policy-wrap h3 {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--neon-orange);
+      margin: 1.5rem 0 0.75rem;
+    }
+
     /* ── Lists ── */
     .policy-wrap ul {
       list-style: none;
@@ -205,6 +216,32 @@
       color: var(--text-secondary);
     }
 
+    /* ── Region-rights cards ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .rights-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(59, 204, 255, 0.06);
+      border-left: 3px solid var(--neon-orange);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+    }
+
+    .rights-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .rights-card p {
+      margin: 0;
+      font-size: 16px;
+    }
+
     /* ── Scroll reveal ── */
     .policy-section {
       opacity: 0;
@@ -254,7 +291,7 @@
   <!-- ═══════════════ HERO ═══════════════ -->
   <div class="policy-hero">
     <h1><span class="accent">Privacy</span> Policy</h1>
-    <p class="last-updated">Last updated: June 2025</p>
+    <p class="last-updated">Last updated: April 2026</p>
   </div>
 
   <!-- ═══════════════ CONTENT ═══════════════ -->
@@ -288,9 +325,17 @@
         </li>
         <li>
           <strong>Mobile app advertising</strong> — Our mobile games use Google AdMob
-          to display advertisements. AdMob may collect device identifiers, IP address,
-          and usage data to serve and measure ads. See
+          to display advertisements. AdMob may collect the <strong>Android Advertising ID (AAID)</strong>
+          or <strong>iOS Advertising Identifier (IDFA)</strong>, IP address, approximate location
+          derived from IP, device model and operating system version, and app interaction data
+          in order to serve, measure, and attribute advertisements. For users located in the
+          European Economic Area, United Kingdom, and Switzerland, the app displays a consent
+          prompt (via Google's User Messaging Platform) allowing you to choose between
+          personalized and non-personalized advertising and to withdraw or change consent at
+          any time through the app's settings. See
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+          and the
+          <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob partner policy</a>
           for full details.
         </li>
         <li>
@@ -373,10 +418,45 @@
     <div class="policy-section">
       <h2><span class="section-num">06</span> Your <span class="accent">Rights</span></h2>
       <p>
-        Depending on your location, you may have rights to access, correct, or request deletion
-        of personal information we hold about you. California residents may also have additional
-        rights under the CCPA. To exercise any of these rights, contact us using the information below.
+        Depending on where you live, you may have specific rights regarding personal information
+        we or our advertising partners hold about you. To exercise any of these rights, contact us
+        at <a href="mailto:contact@everturngames.com">contact@everturngames.com</a>.
       </p>
+
+      <div class="rights-grid">
+        <div class="rights-card">
+          <h3>EEA, UK &amp; Switzerland</h3>
+          <p>
+            Under the GDPR and UK GDPR, you have the right to access, rectify, erase, restrict,
+            port, and object to the processing of your personal data, and to lodge a complaint
+            with your local data protection supervisory authority. Within our mobile apps, you
+            can change your advertising consent at any time through the in-app consent prompt
+            provided by Google's User Messaging Platform.
+          </p>
+        </div>
+        <div class="rights-card">
+          <h3>California Residents</h3>
+          <p>
+            Under the California Consumer Privacy Act (CCPA/CPRA), you have the right to know
+            what personal information we collect, request deletion or correction of your
+            information, and opt out of the "sharing" of personal information for cross-context
+            behavioral advertising (i.e., personalized ads). To opt out within our mobile apps,
+            adjust ad personalization through the in-app consent prompt, or disable personalized
+            advertising in your device settings (Android: Settings → Privacy → Ads; iOS: Settings
+            → Privacy &amp; Security → Apple Advertising). You may also email us to exercise
+            these rights. We will not discriminate against you for exercising any CCPA right.
+          </p>
+        </div>
+        <div class="rights-card">
+          <h3>Other U.S. State Privacy Laws</h3>
+          <p>
+            Residents of states with comprehensive privacy laws (including Virginia, Colorado,
+            Connecticut, Utah, Texas, and others) have similar rights to access, delete, correct,
+            and opt out of targeted advertising. Contact us at the address above to exercise
+            these rights.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- 7 -->
