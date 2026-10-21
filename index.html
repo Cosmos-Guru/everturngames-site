@@ -85,34 +85,44 @@
       </div>
     </div>
   </section>
- 
   <!-- ═══════════════ GAMES ═══════════════ -->
+  <!--
+    HOW TO UPDATE A GAME CARD
+    • Each card has an id (e.g. #royal-21-board) so ads/posts can link
+      straight to it: https://everturngames.com/#royal-21-board
+    • When a store listing goes live, swap the
+        <div class="store-btn store-btn--soon"> ... <small>Coming Soon on</small>
+      for the live version (copy the Royal Poker Board Google Play <a> button),
+      and change the badge to <span class="badge badge--live">Out Now</span>.
+  -->
   <section class="section section-alt" id="games">
     <div class="container">
       <h2 class="section-title">Our <span class="accent">Games</span></h2>
+      <p class="section-subtitle">
+        Classic cards and board games, reimagined. One out now &mdash;
+        five more arriving Winter 2026.
+      </p>
       <div class="games-grid">
- 
-        <!-- ── ROYAL POKER BOARD ── -->
-        <div class="game-card game-card--live">
+
+        <!-- ── ROYAL POKER BOARD (LIVE) ── -->
+        <div class="game-card game-card--live" id="royal-poker-board">
           <div class="game-card-inner">
-            <!--
-              ICON PLACEMENT:
-              Put the Royal Poker Board icon image at:
-                images/royal-poker-board-icon.png
-              Recommended: 512×512 px PNG (same image you use for the app stores)
-            -->
-            <img
-              src="images/royal-poker-board-icon.png"
-              alt="Royal Poker Board icon"
-              class="game-card-icon-img"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="game-card-icon" style="display:none;">👑</div>
- 
+            <div class="game-card-head">
+              <img
+                src="images/royal-poker-board-icon.png"
+                alt="Royal Poker Board icon"
+                class="game-card-icon-img"
+                width="96" height="96"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <div class="game-card-icon" style="display:none;">👑</div>
+              <span class="badge badge--live">Out Now</span>
+            </div>
+
             <h3>Royal Poker Board</h3>
             <p class="game-tagline">Poker meets Scrabble</p>
             <p>Build poker hands on a shared board — place cards strategically, score combinations, and outmaneuver your opponent in this fresh take on classic card strategy.</p>
- 
+
             <div class="store-buttons">
               <!-- Google Play -->
               <a
@@ -129,7 +139,7 @@
                   Google Play
                 </span>
               </a>
- 
+
               <!-- App Store — Coming Soon -->
               <div class="store-btn store-btn--apple store-btn--soon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -143,16 +153,122 @@
             </div>
           </div>
         </div>
- 
-        <!-- ── MORE TO COME ── -->
-        <div class="game-card game-card--placeholder">
+
+        <!-- ── ROYAL POKER CHESS ── -->
+        <div class="game-card" id="royal-poker-chess">
           <div class="game-card-inner">
-            <div class="game-card-icon">🎲</div>
-            <h3>More to Come</h3>
-            <p>We're just getting started. Follow us for announcements on upcoming titles.</p>
+            <div class="game-card-head">
+              <img src="images/royal-poker-chess-icon.webp" alt="Royal Poker Chess icon" class="game-card-icon-img" width="96" height="96" loading="lazy">
+              <span class="badge">Coming Winter 2026</span>
+            </div>
+            <h3>Royal Poker Chess</h3>
+            <p class="game-tagline">Chess, dealt from a deck</p>
+            <p>Your army is a hand of playing cards on a chessboard. Any card can capture any card, Jacks leap like knights and Aces teleport — clear a path and take the enemy King.</p>
+            <div class="store-buttons">
+              <div class="store-btn store-btn--gplay store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.18 23.76c.3.17.65.19.98.07l12.18-7.03-2.61-2.61-10.55 9.57zm-1.68-20.3C1.19 3.8 1 4.18 1 4.64v14.72c0 .46.19.84.5 1.18l.07.07 8.24-8.24v-.2L1.57 3.93l-.07.07zM20.34 10.6l-2.34-1.35-2.93 2.93 2.93 2.93 2.37-1.37c.67-.39.67-1.76-.03-2.14zm-17.16 12.1l10.55-9.59-2.61-2.61L1.5 19.88l1.68 2.82z"/></svg>
+                <span><small>Coming Soon on</small>Google Play</span>
+              </div>
+              <div class="store-btn store-btn--apple store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Coming Soon on</small>App Store</span>
+              </div>
+            </div>
           </div>
         </div>
- 
+
+        <!-- ── ROYAL KING'S SIEGE ── -->
+        <div class="game-card" id="royal-kings-siege">
+          <div class="game-card-inner">
+            <div class="game-card-head">
+              <img src="images/royal-kings-siege-icon.webp" alt="Royal King's Siege icon" class="game-card-icon-img" width="96" height="96" loading="lazy">
+              <span class="badge">Coming Winter 2026</span>
+            </div>
+            <h3>Royal King's Siege</h3>
+            <p class="game-tagline">Bluff, remember, conquer</p>
+            <p>Your cards march face-down across the battlefield. Attack to reveal — higher power wins and the attacker has the edge. Remember what you've seen and storm the enemy King.</p>
+            <div class="store-buttons">
+              <div class="store-btn store-btn--gplay store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.18 23.76c.3.17.65.19.98.07l12.18-7.03-2.61-2.61-10.55 9.57zm-1.68-20.3C1.19 3.8 1 4.18 1 4.64v14.72c0 .46.19.84.5 1.18l.07.07 8.24-8.24v-.2L1.57 3.93l-.07.07zM20.34 10.6l-2.34-1.35-2.93 2.93 2.93 2.93 2.37-1.37c.67-.39.67-1.76-.03-2.14zm-17.16 12.1l10.55-9.59-2.61-2.61L1.5 19.88l1.68 2.82z"/></svg>
+                <span><small>Coming Soon on</small>Google Play</span>
+              </div>
+              <div class="store-btn store-btn--apple store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Coming Soon on</small>App Store</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ROYAL 21 BOARD ── -->
+        <div class="game-card" id="royal-21-board">
+          <div class="game-card-inner">
+            <div class="game-card-head">
+              <img src="images/royal-21-board-icon.webp" alt="Royal 21 Board icon" class="game-card-icon-img" width="96" height="96" loading="lazy">
+              <span class="badge">Coming Winter 2026</span>
+            </div>
+            <h3>Royal 21 Board</h3>
+            <p class="game-tagline">Blackjack on a board</p>
+            <p>Every row and column is a blackjack hand. Push lines toward 21 to lock them in gold, and drop one card on a crossing to score two hands at once. First to 500 wins.</p>
+            <div class="store-buttons">
+              <div class="store-btn store-btn--gplay store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.18 23.76c.3.17.65.19.98.07l12.18-7.03-2.61-2.61-10.55 9.57zm-1.68-20.3C1.19 3.8 1 4.18 1 4.64v14.72c0 .46.19.84.5 1.18l.07.07 8.24-8.24v-.2L1.57 3.93l-.07.07zM20.34 10.6l-2.34-1.35-2.93 2.93 2.93 2.93 2.37-1.37c.67-.39.67-1.76-.03-2.14zm-17.16 12.1l10.55-9.59-2.61-2.61L1.5 19.88l1.68 2.82z"/></svg>
+                <span><small>Coming Soon on</small>Google Play</span>
+              </div>
+              <div class="store-btn store-btn--apple store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Coming Soon on</small>App Store</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ROYAL BATTLE ── -->
+        <div class="game-card" id="royal-battle">
+          <div class="game-card-inner">
+            <div class="game-card-head">
+              <img src="images/royal-battle-icon.webp" alt="Royal Battle logo" class="game-card-icon-img" width="96" height="96" loading="lazy">
+              <span class="badge">Coming Winter 2026</span>
+            </div>
+            <h3>Royal Battle</h3>
+            <p class="game-tagline">A strategic card battle</p>
+            <p>Turn low cards into Aura, summon royal warriors across five lanes, and break through to drain your rival's 21 health. Every rank and suit fights differently.</p>
+            <div class="store-buttons">
+              <div class="store-btn store-btn--gplay store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.18 23.76c.3.17.65.19.98.07l12.18-7.03-2.61-2.61-10.55 9.57zm-1.68-20.3C1.19 3.8 1 4.18 1 4.64v14.72c0 .46.19.84.5 1.18l.07.07 8.24-8.24v-.2L1.57 3.93l-.07.07zM20.34 10.6l-2.34-1.35-2.93 2.93 2.93 2.93 2.37-1.37c.67-.39.67-1.76-.03-2.14zm-17.16 12.1l10.55-9.59-2.61-2.61L1.5 19.88l1.68 2.82z"/></svg>
+                <span><small>Coming Soon on</small>Google Play</span>
+              </div>
+              <div class="store-btn store-btn--apple store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Coming Soon on</small>App Store</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── FIVE-IN-A-ROW ── -->
+        <div class="game-card" id="five-in-a-row">
+          <div class="game-card-inner">
+            <div class="game-card-head">
+              <img src="images/five-in-a-row-icon.webp" alt="Five-in-a-Row icon" class="game-card-icon-img" width="96" height="96" loading="lazy">
+              <span class="badge">Coming Winter 2026</span>
+            </div>
+            <h3>Five-in-a-Row</h3>
+            <p class="game-tagline">Classic gem strategy</p>
+            <p>Line up five sapphires — across, down, or diagonal — before the AI does. Simple to learn, hard to master, with three difficulty levels from casual to expert.</p>
+            <div class="store-buttons">
+              <div class="store-btn store-btn--gplay store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.18 23.76c.3.17.65.19.98.07l12.18-7.03-2.61-2.61-10.55 9.57zm-1.68-20.3C1.19 3.8 1 4.18 1 4.64v14.72c0 .46.19.84.5 1.18l.07.07 8.24-8.24v-.2L1.57 3.93l-.07.07zM20.34 10.6l-2.34-1.35-2.93 2.93 2.93 2.93 2.37-1.37c.67-.39.67-1.76-.03-2.14zm-17.16 12.1l10.55-9.59-2.61-2.61L1.5 19.88l1.68 2.82z"/></svg>
+                <span><small>Coming Soon on</small>Google Play</span>
+              </div>
+              <div class="store-btn store-btn--apple store-btn--soon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Coming Soon on</small>App Store</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -198,7 +314,7 @@
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
     <p class="footer-text">
-      &copy; 2025 EverTurn Games. All rights reserved.
+      &copy; 2026 EverTurn Games. All rights reserved.
       &nbsp;|&nbsp;
       <a href="privacy-policy.html" style="color:inherit; opacity:0.6; text-decoration:none;">Privacy Policy</a>
     </p>

@@ -365,6 +365,89 @@ a   { color: var(--neon-blue); text-decoration: none; }
   color: var(--neon-orange);
   border: 1px solid rgba(255, 155, 46, 0.2);
 }
+.badge--live {
+  background: rgba(59, 204, 255, 0.12);
+  color: var(--neon-blue);
+  border-color: rgba(59, 204, 255, 0.3);
+}
+
+.game-card { display: flex; flex-direction: column; }
+.game-card-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.game-card--live { border-color: rgba(59, 204, 255, 0.22); }
+.game-card { position: relative; }
+.game-card-head { margin-bottom: 20px; }
+.game-card-head .badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+.game-card-icon-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+.game-card .game-tagline {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--neon-pink);
+  margin: -6px 0 12px;
+}
+
+/* ── Store buttons ── */
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 156px;
+  padding: 8px 16px 8px 12px;
+  border-radius: var(--radius-sm);
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.1;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.store-btn svg { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
+.store-btn small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+a.store-btn:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 18px rgba(59, 204, 255, 0.25);
+  transform: translateY(-2px);
+}
+.store-btn--soon {
+  opacity: 0.45;
+  cursor: default;
+}
 
 
 /* ═══════════════ CONTACT FORM ═══════════════ */
@@ -449,7 +532,8 @@ a   { color: var(--neon-blue); text-decoration: none; }
 /* Stagger children */
 .value-card:nth-child(2) { transition-delay: 0.1s; }
 .value-card:nth-child(3) { transition-delay: 0.2s; }
-.game-card:nth-child(2) { transition-delay: 0.12s; }
+.game-card:nth-child(3n+2) { transition-delay: 0.12s; }
+.game-card:nth-child(3n)   { transition-delay: 0.24s; }
 
 
 /* ═══════════════ RESPONSIVE ═══════════════ */
